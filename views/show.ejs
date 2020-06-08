@@ -1,0 +1,14 @@
+<!--shows more info about one camp-->
+<%- include ("partials/header") %>
+<!--accesing "campg" from app.js, where use this template-->
+<div style="text-align: center;">
+    <h1><%= campg.name %></h1>
+    <img src="<%= campg.image%>">
+    <p class="px-5 pt-2" style ="padding-bottom:100px;"><%= campg.description %></p>
+</div>
+
+
+
+
+
+<%- include ("partials/footer") %>

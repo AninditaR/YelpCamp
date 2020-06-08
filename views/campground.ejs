@@ -1,0 +1,37 @@
+<%- include ("partials/header") %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Yelpcamp</h1>
+            <p>You will get all latest camping places</p>
+            <p><!--link to the page adding new camp-->
+            <a href="/campgrounds/new" class="btn btn-primary">Add new camp</a>
+            </p>
+        </div>
+        
+    </header>
+    <!--ADd bootstrap grid-->
+    <!--img-thumbnail add rouded border for each pic and separate them each other-->
+    <div class="row">
+        <% camp.forEach(function(cp){ %>
+            <div class="col-lg-4 col-md-6">
+                
+               <!-- <img src="<%= cp.image %>" style=" height:250px; width: 500px;" class="img-thumbnail" >
+                <h6><%= cp.name %></h6> 
+            figure for addong caption with image-->
+                <figure class="text-center" style ="background-color: bisque; padding-bottom:3px">
+                    <img src="<%= cp.image %>" class="figure-img img-fluid"  style=" height:250px; width: 500px;">
+                    <figcaption class="figure-caption"><strong><%= cp.name %></strong></figcaption>
+                    <!-- for each cp, the link of the descrioption or info-->
+                    <p><a href="/campgrounds/<%= cp._id %>" class="btn btn-primary">More info</a></p>
+                </figure>
+            </div>
+        
+        <% }) %>
+    </div>
+</div>
+
+
+
+
+<%- include ("partials/footer") %>
